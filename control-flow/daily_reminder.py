@@ -8,20 +8,20 @@ time_bound = input("Is it time-bound? (yes/no): ").lower()
 #condtional options
 match priority:
     case "high":
-        priority_message ="high priority task "
+        priority_message ="high priority task"
     case "medium":
-        priority_message ="medium priority task "
+        priority_message ="medium priority task"
     case "low":
-        priority_message ="low priority task "
+        priority_message ="low priority task"
     case _:
-        print("an undefined priority task ")
+        print("an undefined priority task")
 
 while True:
     if time_bound == "yes":
-        time_bound_message = "that requires immediate attention today!"
+        time_bound_message = " that requires immediate attention today!"
         break
     elif time_bound == "no":
-        time_bound_message = "that does not require immediate attention."
+        time_bound_message = ". Consider completing it when you have free time."
         break
     else:
         time_bound = input("Is it time-bound? (yes/no): ").lower()
@@ -29,7 +29,7 @@ while True:
             time_bound_message = ""
             break
 
-dialy_message = f"{name_of_task} is a {priority_message}{time_bound_message}"
+dialy_message = f"'{name_of_task}' is a {priority_message}{time_bound_message}"
 
 print(dialy_message)
 
