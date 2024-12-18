@@ -1,6 +1,6 @@
 # this code provides a recommendation for 
 # various weather condotions
-weather_condition = input("What's the weather like today? (sunny/rainy/cold):").lower()
+weather_condition = input("What's the weather like today? (sunny/rainy/cold): ").lower()
 
 #choosing the flow condition
 if weather_condition == "sunny":
