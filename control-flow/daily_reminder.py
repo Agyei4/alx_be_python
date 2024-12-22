@@ -29,11 +29,9 @@ while True:
             time_bound_message = ""
             break
 
-dialy_message = f"Reminder: '{name_of_task}' is a {priority_message}{time_bound_message}"
+daily_message = f"'{name_of_task}' is a {priority_message}{time_bound_message}"
 
-print(dialy_message)
+print(f"Reminder: {daily_message}")
 
-# /tmp/correction/0785389718703284519366308749665544497166_5/100740/
-# 780490/control-flow/daily_reminder.py doesn't contain
+# /tmp/correction/5331025029102005288045149373333938437458_5/100740/780490/control-flow/daily_reminder.py doesn't contain
 # print\s*\(\s*f?['\"]Reminder:\s*
-
