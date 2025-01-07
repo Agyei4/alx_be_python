@@ -17,7 +17,7 @@ def calculate_future_date():
 
     future_date = dt.date.today() + dt.timedelta(add_day)
 
-    print(f"Future date: {future_date}")
+    print(f"Future date: {future_date.strftime("%Y-%m-%d %H:%M:%S")}")
     return future_date
 
 calculate_future_date()
