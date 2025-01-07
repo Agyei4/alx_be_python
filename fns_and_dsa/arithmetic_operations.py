@@ -1,4 +1,7 @@
 # function with basic arithmetic operations
+from pluggy import Result
+from scipy.special import result
+
 
 def perform_operation(num1,num2,operation):
     """performs basic arithmetic operations 
@@ -15,18 +18,23 @@ def perform_operation(num1,num2,operation):
         result = num1 * num2
     
     elif operation == "divide":
-        try:
+        if num2 == 0:
+            try:
+                result = num1 / num2
+            except ZeroDivisionError:
+                print("Cannot divide by zero.")
+        else:
             result = num1 / num2
-        except ZeroDivisionError:
-            print("Cannot divide by zero.")
-        
-    
+
+
+
 
   
     return result
 
 
 # Test
+print(perform_operation(2,1,"divide"))
 
 """ match operation:
         case "add":      
