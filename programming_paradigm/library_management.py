@@ -40,4 +40,4 @@ class Library:
     def list_available_books(self):
         for book in self._books:
             if not book.is_checked_out:
-                print(f"{book.title} by {author})
+                print(f"{book.title} by {author}")
