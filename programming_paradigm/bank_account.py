@@ -1,5 +1,3 @@
-from tornado.gen import Return
-
 
 class BankAccount:
     def __init__(self, current_balance=0):

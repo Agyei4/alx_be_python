@@ -1,5 +1,10 @@
 import sys
+
 from bank_account import BankAccount
+
+
+# 1
+# from bank_account import BankAccount
 
 def main():
     account = BankAccount(100)  # Example starting balance
@@ -23,6 +28,22 @@ def main():
         account.display_balance()
     else:
         print("Invalid command.")
+
+
+import sys
+from robust_division_calculator import safe_divide
+
+def main():
+    if len(sys.argv) != 3:
+        print("Usage: python main.py <numerator> <denominator>")
+        sys.exit(1)
+
+    numerator = sys.argv[1]
+    denominator = sys.argv[2]
+
+    result = safe_divide(numerator, denominator)
+    print(result)
+
 
 if __name__ == "__main__":
     main()
