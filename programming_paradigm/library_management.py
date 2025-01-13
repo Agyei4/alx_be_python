@@ -1,9 +1,12 @@
+from IPython.core.release import author
+
+
 class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
         self.is_checked_out = False # default value 
-
+        
     
 class Library:
     def __init__(self):
@@ -23,7 +26,7 @@ class Library:
                 return
         print("Sorry, the book is not in the library.")
 
-    def return_book(self, title):
+    def return_book(self, title): # ["return_book(self)"]
         for book in self._books:
             if book.title == title:
                 if book.is_checked_out:
@@ -37,4 +40,4 @@ class Library:
     def list_available_books(self):
         for book in self._books:
             if not book.is_checked_out:
-                print(book.title)
+                print(f"{book.title} by {author})
