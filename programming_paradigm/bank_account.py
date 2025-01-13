@@ -14,10 +14,7 @@ class BankAccount:
     #withdraw method
     def withdraw(self,amount):
         self.__current_balance = self.__current_balance - amount
-        if self.__current_balance :
-            return True
-        else:
-            return False
+        return self.__current_balance
     
     # display_info method
     def display_balance(self):
