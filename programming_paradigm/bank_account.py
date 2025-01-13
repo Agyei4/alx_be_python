@@ -18,9 +18,9 @@ class BankAccount:
         print(f"Current Balance: ${self.__amount}")
         return self.__amount
 
-
-account1= BankAccount(9)
-account1.display_balance()
-print(account1.withdraw(60))
-print(account1.deposit(41))
-        
+#
+# account1= BankAccount(9)
+# account1.display_balance()
+# print(account1.withdraw(60))
+# print(account1.deposit(41))
+#
