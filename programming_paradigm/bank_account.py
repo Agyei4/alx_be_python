@@ -1,6 +1,6 @@
 class BankAccount:
     def __init__(self, amount=0):
-        self.amount = round(float(amount,2))
+        self.amount = float(amount)
 
 
     # Deposit method
