@@ -1,25 +1,21 @@
 from tornado.gen import Return
 
 class BankAccount:
-    def __init__(self, current_balance=0):
-        self.__current_balance = float(current_balance)
+    def __init__(self, initial_balance=0):
+        self.account_balance = initial_balance
 
+    def deposit(self, amount):
+        if amount > 0:
+            self.account_balance += amount
 
-    # Deposit method
-    def deposit(self,amount):
-        self.__current_balance = self.__current_balance + amount
-        return self.__current_balance
-    
-    #withdraw method
-    def withdraw(self,amount):
-        self.__current_balance = self.__current_balance - amount
-        return self.__current_balance
-    
-    # display_info method
+    def withdraw(self, amount):
+        if 0 < amount <= self.account_balance:
+            self.account_balance -= amount
+            return True
+        return False
+
     def display_balance(self):
-        print(f"Current Balance: ${self.__current_balance}")
-        return self.__current_balance
-
+        print(f"Current balance: ${self.account_balance:.2f}")
 #
 # account1= BankAccount(9)
 # account1.display_balance()
